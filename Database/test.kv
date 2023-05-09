@@ -1,0 +1,23 @@
+<ArduinoData>:
+    orientation: "vertical"
+    BoxLayout:
+        size_hint_y: 0.1
+        spacing: 20
+        padding: 10
+
+        
+    ScrollView:
+        GridLayout:
+            size_hint_y: None
+            height: self.minimum_height
+            spacing: 20
+            padding: 10
+            cols: 4
+            Label:
+                text: "Date"
+            Label:
+                text: "Time"
+            Label:
+                text: "Electricity Consumption"
+            Label:
+                text: "Status"

@@ -1,0 +1,65 @@
+MDScreen:
+    name: "main"
+    
+    MDFloatLayout:
+        md_bg_color: 1, 1, 1, 1
+        Image:
+            # Image at the top left of the screen
+
+            # source: ""
+            # pos_hint: {"center_x": .18, "center_y": .95}
+        Image:
+            # Image at the middle
+            
+            source: "assets/logo.png"
+            size_hint: .8, .8
+            pos_hint: {"center_x": .5, "center_y": .65}
+        MDLabel:
+            text: "S P A R K   M A P"
+            # font_name:  # From the downloaded font family (BPoppins)
+            font_size: "23dp"
+            pos_hint: {"center_y": .38}
+            halign: "center"
+            color: rgba(34, 34, 34, 255)
+        MDLabel:
+            text: "An Electricity Consumption Tracker"
+            # font_name: # From the downloaded font family (MPoppins)
+            font_size: "13dp"
+            size_hint_x: .85 
+            pos_hint: {"center_x": .5, "center_y": .3}
+            halign: "center"
+            color: rgba(127, 127, 127, 255)
+
+        Button:
+            text: "LOGIN"
+            size_hint: .66, .065
+            pos_hint: {"center_x": .5, "center_y": .18}
+            background_color: 0, 0, 0, 0
+            # font_name: "BPoppins"
+            on_release: 
+                root.manager.transition.direction = "left"
+                root.manager.currrent = "login"
+            canvas.before:
+                Color: 
+                    rgb: rgba(52, 0, 231, 255)
+                RoundedRectangle:
+                    size: self.size 
+                    pos: self.pos
+                    radius: [5]
+        
+        Button:
+            text: "SIGNUP"
+            size_hint: .66, .065
+            pos_hint: {"center_x": .5, "center_y": .09}
+            background_color: 0, 0, 0, 0
+            # font_name: "BPoppins"
+            color: rgba(52, 0, 231, 255)
+            on_release: 
+                root.manager.transition.direction = "left"
+                root.manager.currrent = "signup"
+            canvas.before:
+                Color: 
+                    rgb: rgba(52, 0, 231, 255)
+                Line:
+                    width: 1.2
+                    rounded_rectangle: self.x, self.y, self.width, self.height, 5, 5, 5, 5, 100
