@@ -1,0 +1,20 @@
+MDToolbar:
+    title: "Table"
+    md_bg_color: app.theme_cls.primary_color
+    elevation: 10
+
+MDDataTable:
+    pos_hint: {"center_x": 0.5, "center_y": 0.5}
+    size_hint: (.9, .6)
+    column_data; [
+        ("Date", dp(30)),
+        ("Time", dp(30)),
+        ("Overall", dp(30)),
+        ("ACES", dp(30)),
+        ("CICS", dp(30)),
+        ("CEAFAD", dp(30)),
+        ("CIT", dp(30))
+    ]
+    row_data: [
+        (root.now.date(), root.now.time(), "Null", "Null", "Null", "Null", "Null"),
+    ]
