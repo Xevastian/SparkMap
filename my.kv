@@ -1,0 +1,419 @@
+
+<MainScreen>:
+    name: 'mainscreen'
+    Image:
+        id: MAINBG
+        orientation: "vertical"
+        size: root.width, root.height
+        source: 'images/BGFORMAIN.png'
+        keep_ratio: True
+        allow_stretch: False
+        collide_widget: False
+
+    FloatLayout:
+        size: root.width, root.height
+        Button:
+            id: logobutton
+            size_hint: (0.156, 0.153)
+            pos_hint: {'right': 0.162, 'top': .992}
+            background_normal: 'images/LOGO.png'
+            background_down: 'images/LOGOCLICKED.png'
+            on_press: 
+                root.manager.current= 'otherscreen1'
+                root.manager.transition.direction = "left"
+
+        Button:
+            id: loginbutton
+            size_hint: (0.123, 0.135)
+            pos_hint: {'right': 0.990 , 'top': .982}
+            background_normal: 'images/LOGIN.png'
+            background_down: 'images/LOGINCLICKED.png'
+            on_press: 
+                root.manager.current= 'login'
+                root.manager.transition.direction = "left"
+
+        Button:
+            id: ldbutton
+            size_hint: (0.123, 0.135)
+            pos_hint: {'right': .630 , 'top': .982}
+            background_normal: 'images/LIVEDATA_UNCLICKED.png'
+            background_down: 'images/LIVEDATA_CLICKED.png'
+            on_press: 
+                root.manager.current= 'LD'
+                root.manager.transition.direction = "left"
+
+
+        Button:
+            id: hsbutton
+            size_hint: (0.123, 0.135)
+            pos_hint: {'right': .750 , 'top': .982}
+            background_normal: 'images/HS.png'
+            background_down: 'images/HSCLICKED.png'
+            on_press: 
+                root.manager.current= 'HS'
+                root.manager.transition.direction = "left"
+
+        Button:
+            id: creditsbutton
+            size_hint: (0.123, 0.135)
+            pos_hint: {'right': .870 , 'top': .982}
+            background_normal: 'images/CREDITS.png'
+            background_down: 'images/CREDITSCLICKED.png'
+            on_press: 
+                root.manager.current= 'credits'
+                root.manager.transition.direction = "left"
+
+        Button:
+            id: learmorebutton
+            size_hint: (0.100, 0.109)
+            pos_hint: {'right': 1.004, 'top': 0.1}
+            background_normal: 'images/LEARNMORE.png'
+            background_down: 'images/LEARNMORECLICKED.png'
+            on_press:
+                root.manager.current= 'learnmore'
+                root.manager.transition.direction = "left"
+
+
+        Button:
+            id: contactusbutton
+            size_hint: (0.100, 0.109)
+            pos_hint: {'right': .9030, 'top': 0.1}
+            background_normal: 'images/CONTACTUS.png'
+            background_down: 'images/CONTACTUSCLICKED.png'
+            on_press: 
+                root.manager.current= 'contactus'
+                root.manager.transition.direction = "left"
+
+        Button:
+            id: SDGbutton
+            size_hint: (0.380, .15)
+            pos_hint: {'right': 0.370, 'top': .13}
+            background_normal: 'images/LONGBUTTON.png'
+            background_down: 'images/LONGBOXCLICKED.png'
+            on_press: 
+                root.manager.current= 'sdg'
+                root.manager.transition.direction = "left"
+                
+
+#=========================================================================================
+        ImageButton:
+            id: button_aces
+            source: 'images/DEF_ACES.png'
+            size_hint: (.10, .15)
+            pos_hint: {'right': .780, 'top': .68}
+        
+        ImageButton:
+            id: button_cics
+            source: 'images/DEF_CICS.png'
+            size_hint: (1.0, .20)
+            pos_hint: {'right': 1.3, 'top': .60}
+        
+        ImageButton:
+            id: button_ceafa
+            source: 'images/DEF_CEAFA.png'
+            size_hint: (1.0, .25)
+            pos_hint: {'right': 1.1, 'top': .58}
+        
+        ImageButton:
+            id: button_cit
+            source: 'images/DEF_CIT.png'
+            size_hint: (1.0, .16)
+            pos_hint: {'right': 1.3, 'top': .39}
+
+<OtherScreen1>:
+    name: 'otherscreen1'
+    Image:
+        id: MAINBG
+        orientation: "vertical"
+        size: root.width, root.height
+        source: 'images/BG1.png'
+        keep_ratio: True
+        allow_stretch: False
+        collide_widget: False
+
+    FloatLayout:
+        size: root.width, root.height
+        Button:
+            id: logobutton
+            size_hint: (0.156, 0.153)
+            pos_hint: {'right': 0.162, 'top': .992}
+            background_normal: 'images/LOGO.png'
+            background_down: 'images/LOGOCLICKED.png'
+            on_press:   
+                root.manager.current = 'mainscreen'
+                root.manager.transition.direction = "right"
+                
+
+        Button:
+            id: loginbutton
+            size_hint: (0.123, 0.135)
+            pos_hint: {'right': 0.990 , 'top': .982}
+            background_normal: 'images/LOGIN.png'
+            background_down: 'images/LOGINCLICKED.png'
+            on_press: root.manager.current= 'login'
+
+        Button:
+            id: creditsbutton
+            size_hint: (0.123, 0.135)
+            pos_hint: {'right': .870 , 'top': .982}
+            background_normal: 'images/CREDITS.png'
+            background_down: 'images/CREDITSCLICKED.png'
+            on_press: root.manager.current= 'credits'
+
+        Button:
+            id: learmorebutton
+            size_hint: (0.100, 0.109)
+            pos_hint: {'right': 1.004, 'top': 0.1}
+            background_normal: 'images/LEARNMORE.png'
+            background_down: 'images/LEARNMORECLICKED.png'
+            on_press: root.manager.current= 'learnmore'
+
+        Button:
+            id: contactusbutton
+            size_hint: (0.100, 0.109)
+            pos_hint: {'right': .9030, 'top': 0.1}
+            background_normal: 'images/CONTACTUS.png'
+            background_down: 'images/CONTACTUSCLICKED.png'
+            on_press: root.manager.current= 'contactus'
+
+#-------------------UNITS------------------------------------------------------
+
+        Button:
+            id: voltsbutton
+            size_hint: (0.170, 0.153)
+            pos_hint: {'left': 0.95, 'top': 0.80}
+            background_normal: 'images/VOLTS.png'
+            background_down: 'images/VOLTSCLICKED.png'
+            on_press: root.volts_pressed()
+
+        Button:
+            id: wattsbutton
+            size_hint: (0.170, 0.153)
+            pos_hint: {'left': 0.95, 'top': 0.65}
+            background_normal: 'images/WATTS.png'
+            background_down: 'images/WATTSCLICKED.png'
+            on_press: root.watts_pressed()
+
+        Button:
+            id: OHMStsbutton
+            size_hint: (0.170, 0.154)
+            pos_hint: {'left': 0.95, 'top': 0.50}
+            background_normal: 'images/OHMS_UNCLICKED.png'
+            background_down: 'images/OHMS_CLICKED.png'
+            on_press: root.ohms_pressed()
+
+        Button:
+            id: amperesbutton
+            size_hint: (0.170, 0.153)
+            pos_hint: {'left': 0.95, 'top': 0.35}
+            background_normal: 'images/AMPERES.png'
+            background_down: 'images/AMPERESCLICKED.png'
+            on_press: root.amperes_pressed()
+
+#-------------------------------------------------------------
+
+        Button:
+            id: ceafabutton
+            size_hint: (0.170, 0.153)
+            pos_hint: {'right': 1.0, 'top': 0.80}
+            background_normal: 'images/CEAFA_UNCLICKED.png'
+            background_down: 'images/CEAFA_CLICKED.png'
+            on_press: root.ceafa_pressed()
+
+        Button:
+            id: acesbutton
+            size_hint: (0.170, 0.153)
+            pos_hint: {'right': 1.0, 'top': .65}
+            background_normal: 'images/ACES_UNCLICKED.png'
+            background_down: 'images/ACES_CLICKED.png'
+            on_press: root.aces_pressed()
+
+        Button:
+            id: cicsbutton
+            size_hint: (0.170, 0.153)
+            pos_hint: {'right': 1.0, 'top': 0.50}
+            background_normal: 'images/CICS_UNCLICKED.png'
+            background_down: 'images/CICS_CLICKED.png'
+            on_press: root.cics_pressed()
+
+        Button:
+            id: citbutton
+            size_hint: (0.170, 0.153)
+            pos_hint: {'right': 1.0, 'top': 0.35}
+            background_normal: 'images/CIT_UNCLICKED.png'
+            background_down: 'images/CIT_CLICKED.png'
+            on_press: root.cit_pressed()
+
+<LIVEDATA>
+    name: 'LD'
+
+    Image:
+        id: LDB
+        orientation: "vertical"
+        size: root.width, root.height
+        source: 'images/LIVEDATA.png'
+        keep_ratio: True
+        allow_stretch: False
+        collide_widget: False 
+
+    FloatLayout:
+        size: root.width, root.height
+        Button:
+            id: logobutton
+            size_hint: (0.156, 0.153)
+            pos_hint: {'right': 0.162, 'top': .992}
+            background_normal: 'images/LOGO.png'
+            background_down: 'images/LOGOCLICKED.png'
+            on_press: 
+                root.manager.current = 'mainscreen'
+                root.manager.transition.direction = "right"
+
+<HSD>
+    name: 'HS'
+
+    Image:
+        id: HS
+        orientation: "vertical"
+        size: root.width, root.height
+        source: 'images/HSBOX.png'
+        keep_ratio: True
+        allow_stretch: False
+        collide_widget: False 
+
+    FloatLayout:
+        size: root.width, root.height
+        Button:
+            id: logobutton
+            size_hint: (0.156, 0.153)
+            pos_hint: {'right': 0.162, 'top': .992}
+            background_normal: 'images/LOGO.png'
+            background_down: 'images/LOGOCLICKED.png'
+            on_press: 
+                root.manager.current = 'mainscreen'
+                root.manager.transition.direction = "right"
+
+<CU>
+    name: 'contactus'
+
+    Image:
+        id: MAINBG
+        orientation: "vertical"
+        size: root.width, root.height
+        source: 'images/windowCU.png'
+        keep_ratio: True
+        allow_stretch: False
+        collide_widget: False    
+
+    FloatLayout:
+        size: root.width, root.height
+        Button:
+            id: logobutton
+            size_hint: (0.156, 0.153)
+            pos_hint: {'right': 0.162, 'top': .992}
+            background_normal: 'images/LOGO.png'
+            background_down: 'images/LOGOCLICKED.png'
+            on_press: 
+                root.manager.current = 'mainscreen'
+                root.manager.transition.direction = "right"
+
+<CREDITS>
+    name: 'credits'
+
+    Image:
+        id: MAINBG
+        orientation: "vertical"
+        size: root.width, root.height
+        source: 'images/windowCREDITS.png'
+        keep_ratio: True
+        allow_stretch: False
+        collide_widget: False 
+
+    FloatLayout:
+        size: root.width, root.height
+        Button:
+            id: logobutton
+            size_hint: (0.156, 0.153)
+            pos_hint: {'right': 0.162, 'top': .992}
+            background_normal: 'images/LOGO.png'
+            background_down: 'images/LOGOCLICKED.png'
+            on_press: 
+                root.manager.current = 'mainscreen'
+                root.manager.transition.direction = "right"
+
+<LEARNMORE>
+    name: 'learnmore'
+
+    Image:
+        id: MAINBG
+        orientation: "vertical"
+        size: root.width, root.height
+        source: 'images/windowLEARNMORE.png'
+        keep_ratio: True
+        allow_stretch: False
+        collide_widget: False 
+
+    FloatLayout:
+        size: root.width, root.height
+        Button:
+            id: logobutton
+            size_hint: (0.156, 0.153)
+            pos_hint: {'right': 0.162, 'top': .992}
+            background_normal: 'images/LOGO.png'
+            background_down: 'images/LOGOCLICKED.png'
+            on_press: 
+                root.manager.current = 'mainscreen'
+                root.manager.transition.direction = "right"
+
+<LOGIN>
+    name: 'login'
+
+    Image:
+        id: MAINBG
+        orientation: "vertical"
+        size: root.width, root.height
+        source: 'images/windowLOGIN.png'
+        keep_ratio: True
+        allow_stretch: False
+        collide_widget: False    
+
+    FloatLayout:
+        size: root.width, root.height
+        Button:
+            id: logobutton
+            size_hint: (0.156, 0.153)
+            pos_hint: {'right': 0.162, 'top': .992}
+            background_normal: 'images/LOGO.png'
+            background_down: 'images/LOGOCLICKED.png'
+            on_press: 
+                root.manager.current = 'mainscreen'
+                root.manager.transition.direction = "right"
+
+<SDG>
+    name: 'sdg'
+    Image:
+        id: MAINBG
+        orientation: "vertical"
+        size: root.width, root.height
+        source: 'images/windowSDG.png'
+        keep_ratio: True
+        allow_stretch: False
+        collide_widget: False    
+
+    FloatLayout:
+        size: root.width, root.height
+        Button:
+            id: logobutton
+            size_hint: (0.156, 0.153)
+            pos_hint: {'right': 0.162, 'top': .992}
+            background_normal: 'images/LOGO.png'
+            background_down: 'images/LOGOCLICKED.png'
+            on_press: 
+                root.manager.current = 'mainscreen'
+                root.manager.transition.direction = "right"
+        Button:
+            id: SDGbutton
+            size_hint: (0.381, .16)
+            pos_hint: {'right': .9656, 'top': .20}
+            background_normal: 'images/LONGBUTTON.png'
+            background_down: 'images/LONGBOXCLICKED.png'
+            on_press: root.open_link()
