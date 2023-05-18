@@ -1,5 +1,5 @@
 # SparkMap 
-CS121[Advance Computer Programing] Project
+CS121 - Advance Computer Programing Project
 
 # Introduction
   Welcome to the project that offers electricity tools and resources. 
