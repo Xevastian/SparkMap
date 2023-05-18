@@ -1,5 +1,7 @@
 # SparkMap 
 CS121[Advance Computer Programing] Project
+
+# Introduction
   Welcome to the project that offers electricity tools and resources. 
   The team is dedicated to creating an electricity consumption map for Batangas State University and The National Engineering University – Alangilan Campus. 
   By monitoring consumption and promoting sustainable practices, they aim to minimize waste and improve efficiency. 
